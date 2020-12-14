@@ -21,3 +21,9 @@ def augment(text):
   for i in range(len(train)):
   train.examples[i].sentence = augment(train.examples[i].sentence)
   ```
+
+Observations :
+Accuracy using LSTM
+bidirectional LSTM
+using GRU
+bidirectional GRU
