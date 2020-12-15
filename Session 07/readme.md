@@ -2,6 +2,10 @@
 
 Sentiment Analysis on Stanford Data [here](https://github.com/sridevibonthu/TSAI_END_P1/blob/main/Session%2007/Sentiment_Analysis_on_stanford_data_using_LSTM_RNN.ipynb)
 
+* maximum accuracy achieved with two labels - 71.5 %   [code](https://github.com/sridevibonthu/TSAI_END_P1/blob/main/Session%2007/binary_labels_Sentiment_Analysis_on_stanford_data_using_LSTM_RNN.ipynb)
+
+* maximum accuracy achived with 5 labels - 36.25%
+
 #### Code for applying Augmentations
 ```
 def augment(text):
