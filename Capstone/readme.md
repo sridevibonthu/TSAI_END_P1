@@ -1,4 +1,8 @@
 
+## Transformer based model to write python code
+
+Goal : From the raw input file which contains English text and python code, curate a dataset and train a transformer model which can predict python code from the input text.
+
 ### Dataset Curation
 
 ### Word Embeddings for Python Code
