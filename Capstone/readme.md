@@ -3,7 +3,7 @@
 
 Goal : From the raw input file which contains English text and python code, curate a dataset and train a transformer model which can predict python code from the input text.
 
-### Dataset Curation
+### Dataset Curation [code](https://github.com/sridevibonthu/END/blob/main/Capstone/END_Dataset_Curation.ipynb)
 
 The initial dataset given is [here](https://drive.google.com/file/d/1rHb0FQ5z5ZpaY2HpyFGY6CeyDG0kTLoO/view) which is both english text and python code as text file. This file can not be used directly for training the model. It needs lot of preprocessing.
 
