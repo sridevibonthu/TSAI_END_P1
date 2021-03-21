@@ -64,6 +64,7 @@ def getTokenizer(python_code):
  ```
  getTokenizer('for i in range(10):\n    print(i)')
  ['for',  'i', 'in',  'range', '(', '10', ')', ':', '\n', '    ', 'print', '(', 'i', ')', '', '']
+ ```
  
  * Care taken to check whether all space strings are multiple of four or not.
  * With the help of Word2Vec class from gensim.models trained the code embeddings and saved as vectors.kv keyed vectors file.
