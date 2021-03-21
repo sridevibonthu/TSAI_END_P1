@@ -5,7 +5,7 @@ Goal : From the raw input file which contains English text and python code, cura
 
 ### Dataset Curation
 
-The initial dataset given is here https://drive.google.com/file/d/1rHb0FQ5z5ZpaY2HpyFGY6CeyDG0kTLoO/view which is both english text and python code as text file. This file can not be used directly for training the model. It needs lot of preprocessing.
+The initial dataset given is [here](https://drive.google.com/file/d/1rHb0FQ5z5ZpaY2HpyFGY6CeyDG0kTLoO/view) which is both english text and python code as text file. This file can not be used directly for training the model. It needs lot of preprocessing.
 
 Observation on the given input file by manual inspection and some EDA :
 
@@ -32,7 +32,7 @@ data[3]
 3. a,b = b,a\n
 ```
 * Removed those records whose code length is exceeding 1000 characters. Now, the number of records are 4299.
-* Saved them into a csv file and it is found here. 
+* Saved them into a csv file and it is found [here](https://github.com/sridevibonthu/TSAI_END_P1/blob/main/Capstone/TexttoPython2.csv). 
 
 xt
 
