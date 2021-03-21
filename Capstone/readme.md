@@ -34,11 +34,10 @@ data[3]
 * Removed those records whose code length is exceeding 1000 characters. Now, the number of records are 4299.
 * Saved them into a csv file and it is found [here](https://github.com/sridevibonthu/TSAI_END_P1/blob/main/Capstone/TexttoPython2.csv). 
 
-xt
-
-
-
 ### Word Embeddings for Python Code
+
+* For this problem, Source is an english text and target is a python source code. regular embeddings created using nn.Embeddings or pre-trained word vectors are enough for the source sequence. Coming to target, nn.Embeddings can only train on the dataset. But most of the vocabulary is set of identifiers used in the code and not part of python tokens like keywords, special characters etc.
+* With this intuition, I have trained code embeddings by using Gensim library and conala-corpus.
 
 ### Model
 
