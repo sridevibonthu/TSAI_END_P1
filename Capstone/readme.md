@@ -27,11 +27,12 @@ data[3]
 * Ths statistics of these pairs is little amazing. Maximum text length is 309 and average length is only 68, Maximum source code length is 7199 characters, where as average is 129. 
 * There are many source code snippets, whose length is less than 20 characters, but they are looking meaningfull. Someof them are shown below.
 ```
-print("")\n
-a=6\nprint(bin(a))\n
-a,b = b,a\n
+1. print("")\n
+2. a=6\nprint(bin(a))\n
+3. a,b = b,a\n
 ```
-* Removed those records whose code length is exceeding 1000 characters. 
+* Removed those records whose code length is exceeding 1000 characters. Now, the number of records are 4299.
+* Saved them into a csv file and it is found here. 
 
 xt
 
