@@ -34,11 +34,40 @@ data[3]
 * Removed those records whose code length is exceeding 1000 characters. Now, the number of records are 4299.
 * Saved them into a csv file and it is found [here](https://github.com/sridevibonthu/TSAI_END_P1/blob/main/Capstone/TexttoPython2.csv). 
 
-### Word Embeddings for Python Code
+### Word Embeddings for Python Code [Code](https://github.com/sridevibonthu/END/blob/main/Capstone/traingwordembeddings.ipynb)
 
 * For this problem, Source is an english text and target is a python source code. regular embeddings created using nn.Embeddings or pre-trained word vectors are enough for the source sequence. Coming to target, nn.Embeddings can only train on the dataset. But most of the vocabulary is set of identifiers used in the code and not part of python tokens like keywords, special characters etc.
-* With this intuition, I have trained code embeddings by using Gensim library and conala-corpus.
+* With this intuition, I have trained code embeddings by using Gensim library and [conala-corpus](http://www.phontron.com/download/conala-corpus-v1.1.zip).
+* Regular spacy tokenizer is not helping with Python code. Adopted the following method from a library to tokenize python code.
+```
+def getTokenizer(python_code):
+    '''
+    Function that returns tokenized python code
+    :return: tokenized code
+    '''
+    tokens = []
+    try:
+        a = list(tokenize(BytesIO(python_code.encode('utf-8')).readline))
+        #print(a)
+        for i__ in a[1:-1]:
+            if i__.exact_type == 3:
+                string_tokens = [k__ for k__ in i__[1]]
+                tokens = tokens + string_tokens
+            else:
+                tokens.append(i__[1])
+    except Exception:
+        print("Error in tokenization")
 
+    return tokens
+ ```
+ and it worked well.
+ ```
+ getTokenizer('for i in range(10):\n    print(i)')
+ ['for',  'i', 'in',  'range', '(', '10', ')', ':', '\n', '    ', 'print', '(', 'i', ')', '', '']
+ 
+ * Care taken to check whether all space strings are multiple of four or not.
+ * With the help of Word2Vec class from gensim.models trained the code embeddings and saved as vectors.kv keyed vectors file.
+ 
 ### Model
 
 ### Sample Results
