@@ -17,10 +17,21 @@ Observation on the given input file by manual inspection and some EDA :
 Final Dataset creation
 * Removed all the blank lines, After removing all the blanks, we have 32994 lines in our input file.
 * Captured all the line numbers of english text (Comments whose length is more than 25 and those which do not have comments on top or below of it)
-* From the English text line numbers, captured the source code in between those line numbers. Total identified english text and source code pairs are 4326 and a sample pair is shown below.
-* ``` data[3] ```
-* 
-* 
+* From the English text line numbers, captured the source code in between those line numbers. Total identified english text and source code pairs are 4325 and a sample pair is shown below.
+``` 
+data[3]
+
+['write a program to find and print the largest among three numbers',
+ "num1 = 10\nnum2 = 12\nnum3 = 14\nif (num1 >= num2) and (num1 >= num3):\n   largest = num1\nelif (num2 >= num1) and (num2 >= num3):\n   largest = num2\nelse:\n   largest = num3\nprint(f'largest:{largest}')\n"]
+```
+* Ths statistics of these pairs is little amazing. Maximum text length is 309 and average length is only 68, Maximum source code length is 7199 characters, where as average is 129. 
+* There are many source code snippets, whose length is less than 20 characters, but they are looking meaningfull. Someof them are shown below.
+```
+print("")\n
+a=6\nprint(bin(a))\n
+a,b = b,a\n
+```
+* Removed those records whose code length is exceeding 1000 characters. 
 
 xt
 
