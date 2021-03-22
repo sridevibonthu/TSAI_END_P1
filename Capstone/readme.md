@@ -133,5 +133,5 @@ def permute(nums ) :
          result_perms = new_perms 
    return result_perms
  ```
-The applications of neural machine translation (NMT) to programming languages have been limited
-so far, mainly because of the lack of parallel resources available in this domain.
+
+Thanks a lot Rohan for your excellent mentoring.
