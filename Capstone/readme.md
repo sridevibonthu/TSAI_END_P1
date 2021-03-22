@@ -69,8 +69,69 @@ def getTokenizer(python_code):
  * Care taken to check whether all space strings are multiple of four or not.
  * With the help of Word2Vec class from gensim.models trained the code embeddings and saved as vectors.kv keyed vectors file.
  
-### Model
+### Model [code](https://github.com/sridevibonthu/TSAI_END_P1/blob/main/Capstone/TexttoCode.ipynb)
+* Special tokenizer for target is used
+* The transformer architecture used in the earlier assignemnt is used.
+* Code embeddings are learnt with the help of gensim.
 
 ### Sample Results
+1. Training Example :
+   
+   Original
+   src = write a python program to convert each0 list element to key - value pair . print the final dictionary
+```
+ test_list = [ 2323 , 82 , 129388 , 234 , 95 ] 
+ print("the original list is : " + str(test_list ) ) 
+ res = dict ( ) 
+ for ele in test_list : 
+     mid_idx = len(str(ele ) ) // 2 
+     key = int(str(ele)[:mid_idx ] ) 
+     val = int(str(ele)[mid_idx : ] ) 
+     res[key ] = val   
+ print("constructed dictionary : " + str(res ) )
+ ```
+ 
+ Predicted
+ ```
+ test_list = [ 2323 , 82 , 129388 , 234 , 95 ] 
+  
+ print("the original list is : " + str(test_list ) ) 
+  
+ res = dict ( ) 
+ for ele in test_list : 
+  
+     mid_idx = len(str(ele ) ) // 2 
+     key = int(str(ele)[:mid_idx ]
+ ```
+ 
+ 2. Validation Example
+ 
+ Original
+ 
+ ```
+ def permute(nums ) : 
+   result_perms = [ [ ] ] 
+   for n in nums : 
+     new_perms = [ ] 
+     for perm in result_perms : 
+       for i in range(len(perm)+1 ) : 
+         new_perms.append(perm[:i ] + [ n ] + perm[i : ] ) 
+         result_perms = new_perms 
+   return result_perms
+ ```
+ 
+ Predicted
+ 
+ ```
+def permute(nums ) : 
+   result_perms = [ [ ] ] 
+   for n in nums : 
+     new_perms = [ ] 
+     for perm in result_perms : 
+       for i in range(len(perm)+1 ) : 
+         new_perms.append(perm[:i ] + perm[i : ] ) 
+         result_perms = new_perms 
+   return result_perms
+ ```
 The applications of neural machine translation (NMT) to programming languages have been limited
 so far, mainly because of the lack of parallel resources available in this domain.
